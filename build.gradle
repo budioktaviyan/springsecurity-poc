@@ -1,0 +1,43 @@
+buildscript {
+    ext {
+        springBootVersion = '1.2.5.RELEASE'
+        mysqlVersion = '5.1.36'
+    }
+
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+ext {
+    projectName = 'springsecurity-poc'
+    projectVersion = '1.0'
+}
+
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+war {
+    baseName = projectName
+    version = projectVersion
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-security:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}")
+    runtime("mysql:mysql-connector-java:${mysqlVersion}")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.5'
+}
