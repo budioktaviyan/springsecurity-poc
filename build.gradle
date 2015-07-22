@@ -19,8 +19,6 @@ ext {
 }
 
 apply plugin: 'war'
-apply plugin: 'eclipse'
-apply plugin: 'spring-boot'
 
 war {
     baseName = projectName
