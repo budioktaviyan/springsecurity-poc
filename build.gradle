@@ -18,6 +18,7 @@ ext {
     projectVersion = '1.0'
 }
 
+apply plugin: 'spring-boot'
 apply plugin: 'war'
 
 war {
@@ -33,6 +34,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-security:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}")
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat:${springBootVersion}")
     runtime("mysql:mysql-connector-java:${mysqlVersion}")
 }
 
