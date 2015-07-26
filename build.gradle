@@ -1,13 +1,14 @@
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+
 buildscript {
     ext {
         springBootVersion = '1.2.5.RELEASE'
         mysqlVersion = '5.1.36'
     }
-
     repositories {
         jcenter()
     }
-
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
@@ -17,9 +18,6 @@ ext {
     projectName = 'springsecurity-poc'
     projectVersion = '1.0'
 }
-
-apply plugin: 'spring-boot'
-apply plugin: 'war'
 
 war {
     baseName = projectName

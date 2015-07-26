@@ -13,11 +13,9 @@ import com.airsystem.sample.security.service.ApplicationService;
 /**
  * @author Budi Oktaviyan Suryanto (budi.oktaviyan@icloud.com)
  */
-
 @Configuration
 @EnableGlobalMethodSecurity(securedEnabled = true)
 public class ApplicationAuthentication extends GlobalAuthenticationConfigurerAdapter {
-
 	@Autowired
 	private ApplicationService applicationService;
 

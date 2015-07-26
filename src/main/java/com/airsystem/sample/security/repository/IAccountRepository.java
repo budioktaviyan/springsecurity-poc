@@ -8,7 +8,6 @@ import com.airsystem.sample.security.domain.Account;
 /**
  * @author Budi Oktaviyan Suryanto (budi.oktaviyan@icloud.com)
  */
-
 @Repository
 public interface IAccountRepository extends JpaRepository<Account, Long> {
 	Account findByUsername(String username);

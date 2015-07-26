@@ -15,11 +15,9 @@ import com.airsystem.sample.security.repository.IContactRepository;
 /**
  * @author Budi Oktaviyan Suryanto (budi.oktaviyan@icloud.com)
  */
-
 @RestController
 @RequestMapping(value = "/contacts")
 public class ContactController {
-
 	@Autowired
 	private IContactRepository contactRepository;
 

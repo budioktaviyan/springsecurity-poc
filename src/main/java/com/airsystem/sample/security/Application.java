@@ -9,11 +9,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 /**
  * @author Budi Oktaviyan Suryanto (budi.oktaviyan@icloud.com)
  */
-
 @SpringBootApplication
 @EnableJpaRepositories
 public class Application extends SpringBootServletInitializer {
-
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder applicationBuilder) {
 		return applicationBuilder.sources(Application.class);

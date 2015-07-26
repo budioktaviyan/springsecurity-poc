@@ -16,11 +16,9 @@ import com.airsystem.sample.security.repository.IAccountRepository;
 /**
  * @author Budi Oktaviyan Suryanto (budi.oktaviyan@icloud.com)
  */
-
 @RestController
 @RequestMapping(value = "/accounts")
 public class AccountController {
-
 	@Autowired
 	private IAccountRepository accountRepository;
 

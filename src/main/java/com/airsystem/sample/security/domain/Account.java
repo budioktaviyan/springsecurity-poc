@@ -10,7 +10,6 @@ import javax.persistence.Id;
 /**
  * @author Budi Oktaviyan Suryanto (budi.oktaviyan@icloud.com)
  */
-
 @Entity
 public class Account implements Serializable {
 	private static final long serialVersionUID = 298361917524295005L;

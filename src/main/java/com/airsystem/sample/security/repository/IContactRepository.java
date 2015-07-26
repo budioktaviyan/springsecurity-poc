@@ -8,7 +8,6 @@ import com.airsystem.sample.security.domain.Contact;
 /**
  * @author Budi Oktaviyan Suryanto (budi.oktaviyan@icloud.com)
  */
-
 @Repository
 public interface IContactRepository extends JpaRepository<Contact, Long> {
 }

@@ -1,5 +1,7 @@
 package com.airsystem.sample.security.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
@@ -16,9 +18,9 @@ import com.airsystem.sample.security.utils.Constants;
 /**
  * @author Budi Oktaviyan Suryanto (budi.oktaviyan@icloud.com)
  */
-
 @Service
 public class ApplicationService implements UserDetailsService {
+	private static final Logger LOG = LoggerFactory.getLogger(ApplicationService.class.getSimpleName());
 
 	@Autowired
 	IAccountRepository accountRepository;
@@ -26,6 +28,8 @@ public class ApplicationService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Account account = accountRepository.findByUsername(username);
+		LOG.info(String.format("ApplicationService.loadUserByUsername(%s)", username));
+
 		if (account == null) {
 			StringBuilder exceptionBuilder = new StringBuilder("Could not find the user '");
 			exceptionBuilder.append(username).append("'");

@@ -10,7 +10,6 @@ import javax.persistence.Id;
 /**
  * @author Budi Oktaviyan Suryanto (budi.oktaviyan@icloud.com)
  */
-
 @Entity
 public class Contact implements Serializable {
 	private static final long serialVersionUID = -1521168348558133477L;
